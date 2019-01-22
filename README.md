@@ -2,12 +2,12 @@
 
 Maven archetype to scaffold UIMA Ruta annotators and package them as a PEAR package. 
 
-## Build prerequisites
+## Prerequisites
 
 - JDK 1.8 or later
 - Maven
 
-## Build instructions
+## Generate a new Ruta Annotator Project
 New Ruta annotator projects with PEAR packaging can be created like this:
 
 ```
@@ -47,8 +47,16 @@ package: com.example.nlp
  Y: : y
 ```
 
-This will generate a Ruta annotator project structure within the `my-ruta-annotator` directory. The project can be built using the following command:
+This will generate a Ruta annotator project structure within the `my-ruta-annotator` directory.
+
+## Build the Ruta Annotator Project
+
+Navigate into the project directory:
 ```
 cd my-ruta-annotator
+```
+Build the Ruta annotator project with maven:
+```
 mvn clean install
 ```
+The maven build will assemble a `my-ruta-annotator-1.0.0-SNAPSHOT.pear` file in the target directory.
