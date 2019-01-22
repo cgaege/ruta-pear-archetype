@@ -30,6 +30,12 @@
 			<artifactId>ruta-core-ext</artifactId>
 			<version>${ruta-version}</version>
 		</dependency>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
+		</dependency>
 	</dependencies>
 	
 	<build>
@@ -42,6 +48,18 @@
 			</resource>
 		</resources>
 		<plugins>
+			<plugin>
+			    <artifactId>maven-failsafe-plugin</artifactId>
+			    <version>2.21.0</version>
+			    <executions>
+			        <execution>
+			            <goals>
+			                <goal>integration-test</goal>
+			                <goal>verify</goal>
+			            </goals>			           
+			        </execution>
+			    </executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.uima</groupId>
 				<artifactId>ruta-maven-plugin</artifactId>

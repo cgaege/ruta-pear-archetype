@@ -21,12 +21,15 @@
 		<fileSet filtered="true" packaged="true">
 			<directory>src/main/ruta</directory>
 		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>src/test/java</directory>
+		</fileSet>
 		<fileSet filtered="true" packaged="false">			
 			<directory></directory>
 			<includes>
 				<include>.buildpath</include>
 			</includes>
-		</fileSet>
+		</fileSet>		
 	</fileSets>
 
 </archetype-descriptor>
