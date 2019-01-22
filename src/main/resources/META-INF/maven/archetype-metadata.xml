@@ -21,6 +21,12 @@
 		<fileSet filtered="true" packaged="true">
 			<directory>src/main/ruta</directory>
 		</fileSet>
+		<fileSet filtered="true" packaged="false">			
+			<directory></directory>
+			<includes>
+				<include>.buildpath</include>
+			</includes>
+		</fileSet>
 	</fileSets>
 
 </archetype-descriptor>
