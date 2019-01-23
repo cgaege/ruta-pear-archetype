@@ -11,8 +11,17 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.pear.tools.PackageInstaller;
 import org.junit.Test;
 
+/*
+ * This integration test ensures that the annotator PEAR package fulfills
+ * the minimal requirements to be installed by the UIMA PackageInstaller 
+ * and to process text
+ */
 public class PearPackageIT {
 
+	/*
+	 * Make sure that the annotator PEAR package 
+	 * can be installed by the UIMA PackageInstaller
+	 */
 	@Test
 	public void testInstallPearPackage() {
 		
@@ -22,6 +31,10 @@ public class PearPackageIT {
 		PackageInstaller.installPackage(installDir, pearPackage, true);
 	}
 	
+	/*
+	 * Make sure that the annotator is able to 
+	 * process text without exceptions
+	 */
 	@Test
 	public void testProcess() throws IOException, UIMAException {
 		
