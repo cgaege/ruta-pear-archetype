@@ -21,6 +21,9 @@
 		<fileSet filtered="true" packaged="true">
 			<directory>src/main/ruta</directory>
 		</fileSet>
+		<fileSet filtered="true" packaged="false">
+			<directory>src/main/resources</directory>
+		</fileSet>
 		<fileSet filtered="true" packaged="true">
 			<directory>src/test/java</directory>
 		</fileSet>
