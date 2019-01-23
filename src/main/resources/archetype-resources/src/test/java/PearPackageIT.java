@@ -1,4 +1,4 @@
-package com.example.nlp;
+package ${package};
 
 import java.io.File;
 import java.io.IOException;
@@ -11,13 +11,13 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.pear.tools.PackageInstaller;
 import org.junit.Test;
 
-public class PearPackageInstallIT {
+public class PearPackageIT {
 
 	@Test
 	public void testInstallPearPackage() {
 		
 		File installDir = new File("target/generated-test-sources");
-		File pearPackage = new File("target/contract-annotator-0.1.0-SNAPSHOT.pear");
+		File pearPackage = new File("target/${artifactId}-${version}.pear");
 		
 		PackageInstaller.installPackage(installDir, pearPackage, true);
 	}
@@ -25,7 +25,7 @@ public class PearPackageInstallIT {
 	@Test
 	public void testProcess() throws IOException, UIMAException {
 		
-		AnalysisEngine analysisEngine = AnalysisEngineFactory.createEngine("com/example/nlp/contract-annotatorRutaAnnotator");
+		AnalysisEngine analysisEngine = AnalysisEngineFactory.createEngine("${packageInPathFormat}/${artifactId}RutaAnnotator");
 		JCas jCas = JCasFactory.createJCas();
 		jCas.setDocumentText("Test document text");
 		
