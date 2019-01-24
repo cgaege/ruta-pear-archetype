@@ -1,6 +1,6 @@
 # ruta-pear-archetype [![Build Status](https://travis-ci.com/cgaege/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/cgaege/ruta-pear-archetype)
 
-Maven archetype to scaffold UIMA Ruta annotators and package them as a PEAR package. 
+Maven archetype to bootstrap UIMA Ruta annotators and package them as a PEAR package. 
 
 ## Prerequisites
 
