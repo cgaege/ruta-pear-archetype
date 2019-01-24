@@ -1,6 +1,6 @@
 # ruta-pear-archetype [![Build Status](https://travis-ci.com/cgaege/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/cgaege/ruta-pear-archetype)
 
-Maven archetype to bootstrap UIMA Ruta annotators and package them as a PEAR package. 
+Project template to bootstrap UIMA Ruta annotators and package them as a PEAR package. 
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ Maven archetype to bootstrap UIMA Ruta annotators and package them as a PEAR pac
 - Maven
 
 ## Generate a new Ruta Annotator Project
-New Ruta annotator projects with PEAR packaging can be created like this:
+New Ruta annotator projects with PEAR packaging can be generated like this:
 
 ```
 mvn archetype:generate -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=ruta-pear-archetype -DarchetypeVersion=0.2.0-RC1
@@ -49,7 +49,7 @@ package: com.example.nlp
 
 This will generate a Ruta annotator project structure within the `my-ruta-annotator` directory.
 
-## Build the Ruta Annotator Project
+## Build the generated Ruta Annotator Project
 
 Navigate into the project directory:
 ```
@@ -59,4 +59,4 @@ Build the Ruta annotator project with maven:
 ```
 mvn clean install
 ```
-The maven build will assemble a `my-ruta-annotator-1.0.0-SNAPSHOT.pear` file in the target directory.
+This will assemble a `my-ruta-annotator-1.0.0-SNAPSHOT.pear` package in the target directory.
