@@ -11,7 +11,7 @@ Maven archetype to scaffold UIMA Ruta annotators and package them as a PEAR pack
 New Ruta annotator projects with PEAR packaging can be created like this:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=ruta-pear-archetype -DarchetypeVersion=0.2.0-SNAPSHOT
+mvn archetype:generate -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=ruta-pear-archetype -DarchetypeVersion=0.2.0-RC1
 ```
 You need to define a groupId, artifactId and version for your UIMA Ruta annotator project. See https://maven.apache.org/guides/mini/guide-naming-conventions.html for further details.
 
