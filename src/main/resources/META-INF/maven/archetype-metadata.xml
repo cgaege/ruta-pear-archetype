@@ -34,5 +34,11 @@
 			</includes>
 		</fileSet>		
 	</fileSets>
+	
+	<requiredProperties>
+	    <requiredProperty key="rutaScriptName">
+	      <defaultValue>${artifactId.replaceAll("-", "").substring(0,1).toUpperCase()}${artifactId.replaceAll("-", "").substring(1)}</defaultValue>
+	    </requiredProperty>
+  	</requiredProperties>
 
 </archetype-descriptor>
