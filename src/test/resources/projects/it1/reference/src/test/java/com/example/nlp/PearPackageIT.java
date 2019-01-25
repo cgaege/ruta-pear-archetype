@@ -4,11 +4,15 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.uima.UIMAException;
+import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.factory.JCasFactory;
+import org.apache.uima.fit.util.SimpleNamedResourceManager;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.pear.tools.PackageBrowser;
 import org.apache.uima.pear.tools.PackageInstaller;
+import org.apache.uima.resource.PearSpecifier;
+import org.apache.uima.util.XMLInputSource;
 import org.junit.Test;
 
 /*
@@ -23,12 +27,9 @@ public class PearPackageIT {
 	 * can be installed by the UIMA PackageInstaller
 	 */
 	@Test
-	public void testInstallPearPackage() {
+	public void testInstallPearPackage() throws IOException, UIMAException {
 		
-		File installDir = new File("target/generated-test-sources");
-		File pearPackage = new File("target/contract-annotator-0.1.0-SNAPSHOT.pear");
-		
-		PackageInstaller.installPackage(installDir, pearPackage, true);
+		this.installPackage();			
 	}
 	
 	/*
@@ -36,13 +37,24 @@ public class PearPackageIT {
 	 * process text without exceptions
 	 */
 	@Test
-	public void testProcess() throws IOException, UIMAException {
+	public void testProcessText() throws IOException, UIMAException {
 		
-		AnalysisEngine analysisEngine = AnalysisEngineFactory.createEngine("com/example/nlp/contract-annotatorRutaAnnotator");
+		PackageBrowser packageBrowser = this.installPackage();		
+		XMLInputSource xmlInputSource = new XMLInputSource(packageBrowser.getComponentPearDescPath());
+		PearSpecifier pearSpecifier = UIMAFramework.getXMLParser().parsePearSpecifier(xmlInputSource);
+		AnalysisEngine analysisEngine = UIMAFramework.produceAnalysisEngine(pearSpecifier, new SimpleNamedResourceManager(), null);
+		
 		JCas jCas = JCasFactory.createJCas();
 		jCas.setDocumentText("Test document text");
 		
 		analysisEngine.process(jCas);
 	}
 
+	private PackageBrowser installPackage() {
+		
+		File installDir = new File("target/generated-test-sources");
+		File pearPackage = new File("target/contract-annotator-0.1.0-SNAPSHOT.pear");
+		
+		return PackageInstaller.installPackage(installDir, pearPackage, true);
+	}
 }
