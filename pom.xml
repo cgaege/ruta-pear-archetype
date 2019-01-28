@@ -8,6 +8,10 @@
 	<version>0.3.0-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>Template to create PEAR packaged UIMA Ruta annotators</description>
+	<url>https://github.com/cgaege/ruta-pear-archetype</url>
+
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
