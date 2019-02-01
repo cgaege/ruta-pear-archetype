@@ -10,7 +10,7 @@
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Template to create PEAR packaged UIMA Ruta annotators</description>
-	<url>https://github.com/cgaege/ruta-pear-archetype</url>
+	<url>https://github.com/averbis/ruta-pear-archetype</url>
 
 	<licenses>
 		<license>
@@ -29,9 +29,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/cgaege/ruta-pear-archetype</connection>
-		<developerConnection>scm:git:git@github.com:cgaege/ruta-pear-archetype.git</developerConnection>
-		<url>https://github.com/cgaege/ruta-pear-archetype</url>
+		<connection>scm:git:git://github.com/averbis/ruta-pear-archetype</connection>
+		<developerConnection>scm:git:git@github.com:averbis/ruta-pear-archetype.git</developerConnection>
+		<url>https://github.com/averbis/ruta-pear-archetype</url>
 		<tag>HEAD</tag>
 	</scm>
 	

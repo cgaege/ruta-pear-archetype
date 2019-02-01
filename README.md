@@ -1,4 +1,4 @@
-# ruta-pear-archetype [![Build Status](https://travis-ci.com/cgaege/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/cgaege/ruta-pear-archetype)
+# ruta-pear-archetype [![Build Status](https://travis-ci.com/averbis/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/averbis/ruta-pear-archetype)
 
 Project template to bootstrap UIMA Ruta annotators and package them as a PEAR package. 
 
