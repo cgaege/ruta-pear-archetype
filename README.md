@@ -1,4 +1,5 @@
-# ruta-pear-archetype [![Build Status](https://travis-ci.com/averbis/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/averbis/ruta-pear-archetype)
+# ruta-pear-archetype [![Build Status](https://travis-ci.com/averbis/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/averbis/ruta-pear-archetype) [![Maven Central](https://img.shields.io/maven-central/v/de.averbis.textanalysis/ruta-pear-archetype.svg)](https://img.shields.io/maven-central/v/de.averbis.textanalysis/ruta-pear-archetype.svg)
+
 
 Project template to bootstrap UIMA Ruta annotators and package them as a PEAR package. 
 
@@ -14,7 +15,7 @@ New Ruta annotator projects with PEAR packaging can be generated with the follow
 mvn archetype:generate 
 -DarchetypeGroupId=de.averbis.textanalysis 
 -DarchetypeArtifactId=ruta-pear-archetype 
--DarchetypeVersion=0.2.0-RC1
+-DarchetypeVersion=1.0.0
 ```
 You need to define a [groupId, artifactId and version](https://maven.apache.org/guides/mini/guide-naming-conventions.html) for your UIMA Ruta annotator project. 
 
