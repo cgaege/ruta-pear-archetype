@@ -1,4 +1,4 @@
-# ruta-pear-archetype [![Build Status](https://travis-ci.com/averbis/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/averbis/ruta-pear-archetype) [![Maven Central](https://img.shields.io/maven-central/v/de.averbis.textanalysis/ruta-pear-archetype.svg)](https://img.shields.io/maven-central/v/de.averbis.textanalysis/ruta-pear-archetype.svg)
+# ruta-pear-archetype [![Build Status](https://travis-ci.com/averbis/ruta-pear-archetype.svg?branch=master)](https://travis-ci.com/averbis/ruta-pear-archetype) ![](https://img.shields.io/maven-central/v/de.averbis.textanalysis/ruta-pear-archetype.svg?style=flat)
 
 
 Project template to bootstrap UIMA Ruta annotators and package them as a PEAR package. 
