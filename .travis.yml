@@ -2,4 +2,3 @@ language: java
 os:
   - linux
   - osx
-  - windows
