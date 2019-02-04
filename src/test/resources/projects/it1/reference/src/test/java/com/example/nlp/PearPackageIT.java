@@ -55,6 +55,6 @@ public class PearPackageIT {
 		File installDir = new File("target/generated-test-sources");
 		File pearPackage = new File("target/contract-annotator-0.1.0-SNAPSHOT.pear");
 		
-		return PackageInstaller.installPackage(installDir, pearPackage, true);
+		return PackageInstaller.installPackage(installDir, pearPackage, true, false);
 	}
 }

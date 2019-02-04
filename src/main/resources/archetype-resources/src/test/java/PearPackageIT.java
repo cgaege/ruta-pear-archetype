@@ -55,6 +55,6 @@ public class PearPackageIT {
 		File installDir = new File("target/generated-test-sources");
 		File pearPackage = new File("target/${artifactId}-${version}.pear");
 		
-		return PackageInstaller.installPackage(installDir, pearPackage, true);
+		return PackageInstaller.installPackage(installDir, pearPackage, true, false);
 	}
 }
