@@ -27,7 +27,7 @@ public class PearPackageIT {
 	 * can be installed by the UIMA PackageInstaller
 	 */
 	@Test
-	public void testInstallPearPackage() throws IOException, UIMAException {
+	public void testInstallPearPackage() {
 		
 		this.installPackage();			
 	}
