@@ -31,7 +31,7 @@ Define value for property 'artifactId': my-ruta-annotator
 
 3. Define a `version` for your Ruta annotator. 
 ```
-Define value for property 'version': 1.0-SNAPSHOT
+Define value for property 'version' 1.0-SNAPSHOT: 1.0
 ```
 
 4. Define a `package` for your Ruta annotator. It must follow [Java's package name rules](https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html).
@@ -50,7 +50,7 @@ Define value for property 'rutaScriptName' Myrutaannotator: MyAnnotator
 Confirm properties configuration:
 groupId: com.example
 artifactId: my-ruta-annotator
-version: 1.0-SNAPSHOT
+version: 1.0
 package: com.example.nlp
 rutaScriptName: MyAnnotator
  Y: : y
@@ -94,5 +94,5 @@ mvn clean install
 This will assemble a PEAR package in the target directory.
 
 ```
-target/my-ruta-annotator-1.0-SNAPSHOT.pear
+target/my-ruta-annotator-1.0.pear
 ```
