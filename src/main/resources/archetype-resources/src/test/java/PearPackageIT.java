@@ -27,7 +27,7 @@ public class PearPackageIT {
 	 * can be installed by the UIMA PackageInstaller
 	 */
 	@Test
-	public void testInstallPearPackage() throws IOException, UIMAException {
+	public void testInstallPearPackage() {
 		
 		this.installPackage();			
 	}
@@ -55,6 +55,6 @@ public class PearPackageIT {
 		File installDir = new File("target/generated-test-sources");
 		File pearPackage = new File("target/${artifactId}-${version}.pear");
 		
-		return PackageInstaller.installPackage(installDir, pearPackage, true);
+		return PackageInstaller.installPackage(installDir, pearPackage, true, false);
 	}
 }
