@@ -12,6 +12,8 @@
 	<packaging>jar</packaging>
 
 	<properties>
+		<!-- See https://github.com/averbis/core-typesystems for latest version of Averbis core typesystems  -->
+		<core-typesystems-version>3.23.0</core-typesystems-version>
 		<uima-version>2.10.3</uima-version>
 		<ruta-version>2.7.0</ruta-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -29,6 +31,26 @@
 			<groupId>org.apache.uima</groupId>
 			<artifactId>ruta-core-ext</artifactId>
 			<version>${ruta-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>components-core-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>measurement-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>temporal-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>numeric-value-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 		    <groupId>junit</groupId>
