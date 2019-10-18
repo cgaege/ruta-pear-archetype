@@ -1,8 +1,3 @@
 PACKAGE de.customer.nlp;
 
-TYPESYSTEM de.averbis.textanalysis.typesystems.AverbisTypeSystem;
-TYPESYSTEM de.averbis.textanalysis.typesystems.MeasurementTypeSystem;
-TYPESYSTEM de.averbis.textanalysis.typesystems.NumericValueTypeSystem;
-TYPESYSTEM de.averbis.textanalysis.typesystems.TemporalTypeSystem;
-
 // add Ruta code here
