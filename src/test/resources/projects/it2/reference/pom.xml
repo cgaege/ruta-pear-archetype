@@ -15,9 +15,9 @@
 		<!-- See https://github.com/averbis/core-typesystems for latest version of Averbis core type systems  -->
 		<core-typesystems-version>3.23.0</core-typesystems-version>
 		<!-- See https://github.com/averbis/health-typesystems for the latest version of Averbis health type systems -->
-		<health-typesystems-version>2.26.0</health-typesystems-version>
-		<uima-version>2.10.3</uima-version>
-		<ruta-version>2.7.0</ruta-version>
+		<health-typesystems-version>2.29.0</health-typesystems-version>
+		<uima-version>2.10.4</uima-version>
+		<ruta-version>2.8.0</ruta-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
