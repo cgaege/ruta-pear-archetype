@@ -11,3 +11,8 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 /.project
+.idea/modules.xml
+.idea/ruta-pear-archetype.iml
+.idea/vcs.xml
+.idea/workspace.xml
+.vscode/settings.json
