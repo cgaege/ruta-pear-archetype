@@ -12,7 +12,7 @@ Project template to bootstrap UIMA Ruta annotators and package them as a PEAR pa
 There is no need to clone this repo to generate a new Ruta annotator project. Just execute the following command:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=ruta-pear-archetype -DarchetypeVersion=1.4.0
+mvn archetype:generate -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=ruta-pear-archetype -DarchetypeVersion=2.0.0-SNAPSHOT
 ```
 You need to define a [groupId, artifactId and version](https://maven.apache.org/guides/mini/guide-naming-conventions.html) for your UIMA Ruta annotator project. 
 
