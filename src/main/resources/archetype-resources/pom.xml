@@ -26,6 +26,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.uima</groupId>
+			<artifactId>uimaj-core</artifactId>
+			<version>${uima-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.uima</groupId>
 			<artifactId>ruta-core</artifactId>
 			<version>${ruta-version}</version>
 		</dependency>
