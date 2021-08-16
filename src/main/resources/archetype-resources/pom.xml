@@ -12,14 +12,24 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<uima-version>2.10.3</uima-version>
-		<ruta-version>2.6.1</ruta-version>
+		<!-- See https://github.com/averbis/core-typesystems for latest version of Averbis core type systems  -->
+		<core-typesystems-version>4.1.0</core-typesystems-version>
+		<!-- See https://github.com/averbis/health-typesystems for the latest version of Averbis health type systems -->
+		<health-typesystems-version>3.1.0</health-typesystems-version>
+		<uima-version>3.2.0</uima-version>
+		<ruta-version>3.1.0</ruta-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.uima</groupId>
+			<artifactId>uimaj-core</artifactId>
+			<version>${uima-version}</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>ruta-core</artifactId>
@@ -29,6 +39,101 @@
 			<groupId>org.apache.uima</groupId>
 			<artifactId>ruta-core-ext</artifactId>
 			<version>${ruta-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>components-core-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>measurement-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>temporal-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>numeric-value-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>clinical-section-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>components-health-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>diagnosis-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>ehr-information-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>laboratory-value-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>medical-disambiguation-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>medical-negation-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>medication-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>observation-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>oncology-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>pathology-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>patient-information-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>procedure-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>therapy-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>tnm-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
 		</dependency>
 		<dependency>
 		    <groupId>junit</groupId>
@@ -139,6 +244,24 @@
 									</includes>
 								</resource>
 							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/pearPackaging/lib</outputDirectory>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<includeScope>runtime</includeScope>
 						</configuration>
 					</execution>
 				</executions>
